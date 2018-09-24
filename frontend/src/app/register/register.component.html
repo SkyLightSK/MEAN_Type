@@ -1,0 +1,25 @@
+<mat-card>
+
+  <mat-card-title> Register </mat-card-title>
+  <mat-card-subtitle>Already a member? Please <a routerLink="/login">log in</a> instead.</mat-card-subtitle>
+
+  <form (submit)="register()">
+      <mat-form-field>
+        <mat-label for="name">Full name</mat-label>
+        <input matInput type="text" class="form-control" name="name" placeholder="Enter your name" [(ngModel)]="credentials.name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="email">Email address</mat-label>
+        <input matInput type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.email">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label for="password">Password</mat-label>
+        <input matInput type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password">
+      </mat-form-field>
+
+
+    <button mat-fab color="accent" type="submit" > Reg! </button>
+
+  </form>
+</mat-card>

@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title> Sign in </mat-card-title>
+  <mat-card-subtitle>Not a member? Please <a routerLink="/register">register</a> instead.</mat-card-subtitle>
+
+  <form (submit)="login()">
+
+    <mat-form-field>
+      <mat-label for="email">Email address</mat-label>
+      <input matInput type="email" class="form-control" name="email"  [(ngModel)]="credentials.email">
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label for="password">Password</mat-label>
+      <input matInput type="password" class="form-control" name="password" [(ngModel)]="credentials.password">
+    </mat-form-field>
+
+    <button mat-fab color="accent" type="submit" class="btn btn-default">Sign in!</button>
+  </form>
+</mat-card>
